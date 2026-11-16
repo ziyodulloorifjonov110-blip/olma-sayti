@@ -1,0 +1,104 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: #ffffff; color: #1d1d1f; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+
+.global-nav {
+    position: fixed; top: 0; left: 0; width: 100%; height: 44px;
+    background-color: rgba(0, 0, 0, 0.82); backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); z-index: 9999; display: flex; justify-content: center;
+}
+.nav-list { display: flex; align-items: center; max-width: 1024px; width: 100%; justify-content: space-between; padding: 0 22px; }
+.nav-item { color: #f5f5f7; opacity: 0.8; font-size: 12px; transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.nav-item:hover { opacity: 1; }
+.apple-logo, .search-btn, .bag-btn { font-size: 14px; }
+
+/* Выпадающие меню */
+.nav-flyout {
+    position: absolute; top: 44px; left: 0; width: 100%; background-color: #f5f5f7; color: #1d1d1f;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); max-height: 0; overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 9998;
+}
+.nav-flyout.active { max-height: 450px; border-bottom: 1px solid #d2d2d7; }
+.flyout-content { max-width: 900px; margin: 0 auto; padding: 40px 20px; display: flex; justify-content: space-around; opacity: 0; transform: translateY(-10px); transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s; }
+.nav-flyout.active .flyout-content { opacity: 1; transform: translateY(0); }
+.flyout-column h4 { font-size: 12px; color: #86868b; margin-bottom: 12px; text-transform: uppercase; }
+.flyout-column ul { list-style: none; }
+.flyout-column li { margin-bottom: 10px; }
+.flyout-column a { font-size: 16px; font-weight: 600; color: #1d1d1f; }
+.flyout-column a:hover { color: #0066cc; }
+
+/* Анимации появления */
+.hero-section { height: 680px; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 70px; margin-bottom: 12px; position: relative; overflow: hidden; }
+.hero-content { display: flex; flex-direction: column; align-items: center; z-index: 2; }
+.animate-fade-in { animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.product-title { font-size: 56px; font-weight: 600; margin-bottom: 6px; }
+.product-subtitle { font-size: 24px; color: #86868b; margin-bottom: 20px; }
+.dark-theme .product-title, .dark-theme .product-subtitle { color: #f5f5f7; }
+.cta-links { display: flex; gap: 15px; }
+.cta-button { font-size: 17px; padding: 8px 18px; border-radius: 980px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.cta-button.primary { background-color: #0071e3; color: #fff; }
+.cta-button.primary:hover { background-color: #0077ed; transform: scale(1.03); }
+.cta-button.secondary { border: 1px solid #0071e3; color: #0071e3; }
+.cta-button.secondary:hover { background-color: #0071e3; color: #fff; transform: scale(1.03); }
+
+.iphone-hero, .macbook-hero-section { background-color: #000; color: #fff; }
+.watch-hero { background-color: #fbfbfd; color: #1d1d1f; }
+.hero-media { margin-top: 20px; z-index: 1; display: flex; justify-content: center; }
+.product-hero-img { max-width: 650px; width: 100%; height: auto; object-fit: contain; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.product-hero-img:hover { transform: scale(1.02); }
+.small-img { max-width: 320px; }
+
+/* Поиск */
+.search-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 120px; background-color: #fff; z-index: 10000; display: flex; align-items: center; justify-content: center; transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.search-overlay.active { transform: translateY(0); }
+.search-container { width: 600px; display: flex; align-items: center; border-bottom: 1px solid #d2d2d7; padding-bottom: 8px; }
+.search-container input { border: none; outline: none; font-size: 20px; width: 100%; margin-left: 12px; background: transparent; }
+
+/* Конфигуратор и Подменю */
+.product-subnav { position: fixed; top: 44px; left: 0; width: 100%; height: 52px; background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid #d2d2d7; z-index: 998; display: flex; justify-content: center; }
+.subnav-container { max-width: 1024px; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 22px; }
+.subnav-title a { font-size: 21px; font-weight: 600; }
+.subnav-links { display: flex; align-items: center; gap: 20px; }
+.subnav-links a { font-size: 12px; color: #515154; }
+.subnav-buy-btn { background-color: #0071e3; color: #fff !important; padding: 4px 12px; border-radius: 980px; }
+.iphone-overview-hero { text-align: center; padding: 60px 20px 40px 20px; background-color: #fbfbfd; }
+.badge-new { font-size: 14px; color: #b64400; font-weight: 600; text-transform: uppercase; }
+.iphone-overview-hero h1 { font-size: 56px; font-weight: 600; margin: 10px 0; }
+.tagline { font-size: 24px; color: #86868b; margin-bottom: 30px; }
+.configurator-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+.configurator-wrapper h2 { font-size: 40px; font-weight: 600; text-align: center; }
+.config-subtitle { text-align: center; font-size: 19px; color: #86868b; margin-bottom: 40px; }
+.configurator-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.config-preview { position: sticky; top: 120px; text-align: center; background-color: #f5f5f7; border-radius: 20px; padding: 40px; }
+.device-render img { max-width: 100%; max-height: 450px; object-fit: contain; }
+.option-group { margin-bottom: 30px; }
+.option-group h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.step-num { background: #1d1d1f; color: #fff; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 14px; }
+.color-swatches { display: flex; gap: 15px; }
+.swatch { width: 36px; height: 36px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
+.swatch.active { border-color: #0071e3; transform: scale(1.1); }
+.storage-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.storage-card { border: 2px solid #d2d2d7; border-radius: 12px; padding: 20px; background: #fff; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: all 0.2s; }
+.storage-card.active { border-color: #0071e3; box-shadow: 0 0 0 1px #0071e3; }
+.storage-size { font-size: 24px; font-weight: 600; }
+.storage-price { font-size: 14px; color: #86868b; }
+.config-summary-box { background-color: #f5f5f7; padding: 24px; border-radius: 16px; display: flex; flex-direction: column; gap: 16px; }
+.price-big { font-size: 28px; font-weight: 600; }
+
+/* Корзина */
+.bag-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); z-index: 10001; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+.bag-overlay.active { opacity: 1; pointer-events: auto; }
+.bag-modal { background: #fff; width: 480px; max-width: 90%; max-height: 80vh; border-radius: 18px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); display: flex; flex-direction: column; overflow: hidden; transform: scale(0.9); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.bag-overlay.active .bag-modal { transform: scale(1); }
+.bag-header { padding: 20px 24px; border-bottom: 1px solid #d2d2d7; display: flex; justify-content: space-between; align-items: center; }
+.bag-body { padding: 24px; overflow-y: auto; flex-grow: 1; }
+.empty-bag { text-align: center; padding: 40px 0; color: #86868b; }
+.bag-footer { padding: 20px 24px; background: #f5f5f7; border-top: 1px solid #d2d2d7; display: flex; flex-direction: column; gap: 12px; }
+.bag-total-row { display: flex; justify-content: space-between; font-size: 18px; font-weight: 600; }
+
+/* Футер */
+.global-footer { background-color: #f5f5f7; color: #86868b; font-size: 12px; padding: 20px 0 40px 0; display: flex; justify-content: center; }
+.footer-limiter { max-width: 1024px; width: 100%; padding: 0 22px; }
+@media(max-width: 768px) { .configurator-grid { grid-template-columns: 1fr; } .product-title { font-size: 38px; } .nav-list .nav-item:not(.apple-logo):not(.search-btn):not(.bag-btn) { display: none; } }

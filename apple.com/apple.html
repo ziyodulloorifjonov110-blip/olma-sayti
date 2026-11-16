@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 17 Pro - Apple</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="global-nav">
+        <nav class="nav-list">
+            <a href="index.html" class="nav-item apple-logo"><i class="fab fa-apple"></i></a>
+            <a href="#" class="nav-item" data-menu="store">Store</a>
+            <a href="mac.html" class="nav-item" data-menu="mac">Mac</a>
+            <a href="iphone.html" class="nav-item" style="opacity: 1;" data-menu="iphone">iPhone</a>
+            <a href="#" class="nav-item" data-menu="watch">Watch</a>
+            <a href="#" class="nav-item search-btn"><i class="fas fa-search"></i></a>
+            <a href="#" class="nav-item bag-btn"><i class="fas fa-shopping-bag"></i></a>
+        </nav>
+    </header>
+
+    <nav class="product-subnav">
+        <div class="subnav-container">
+            <div class="subnav-title"><a href="iphone.html">iPhone 17 Pro</a></div>
+            <div class="subnav-links">
+                <a href="#overview">Overview</a>
+                <a href="#specs">Tech Specs</a>
+                <a href="#buy" class="subnav-buy-btn">Buy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container" style="margin-top: 96px;">
+        <section id="overview" class="iphone-overview-hero">
+            <span class="badge-new">New</span>
+            <h1>iPhone 17 Pro</h1>
+            <p class="tagline">All-out Titanium. Unmatched Performance.</p>
+            <div class="hero-image-box">
+                <img src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png" alt="iPhone 17 Pro">
+            </div>
+        </section>
+
+        <section id="buy" class="configurator-section">
+            <div class="configurator-wrapper">
+                <h2>Buy iPhone 17 Pro</h2>
+                <p class="config-subtitle">From $999 or $41.62/mo. for 24 mo.</p>
+
+                <div class="configurator-grid">
+                    <div class="config-preview">
+                        <div class="device-render">
+                            <img id="deviceImage" src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png" alt="Selected iPhone Color">
+                        </div>
+                        <div class="shipping-info"><i class="fas fa-box"></i> Free shipping. Free returns.</div>
+                    </div>
+
+                    <div class="config-options">
+                        <div class="option-group">
+                            <h3><span class="step-num">1</span> Choose your finish.</h3>
+                            <p class="selected-option-label">Color: <strong id="selectedColorName">Cosmic Orange</strong></p>
+                            <div class="color-swatches">
+                                <button class="swatch active" data-color="Cosmic Orange" data-img="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png" style="background-color: #d97746;"></button>
+                                <button class="swatch" data-color="Natural Titanium" data-img="https://images.unsplash.com/photo-1696446701796-da61225697cc?q=80&w=800&auto=format&fit=crop" style="background-color: #b5b0a1;"></button>
+                                <button class="swatch" data-color="Space Black" data-img="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800&auto=format&fit=crop" style="background-color: #3b3b3d;"></button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <h3><span class="step-num">2</span> Choose your storage capacity.</h3>
+                            <div class="storage-options">
+                                <button class="storage-card active" data-storage="128GB" data-price="999">
+                                    <span class="storage-size">128<small>GB</small></span>
+                                    <span class="storage-price">$999</span>
+                                </button>
+                                <button class="storage-card" data-storage="256GB" data-price="1099">
+                                    <span class="storage-size">256<small>GB</small></span>
+                                    <span class="storage-price">$1,099</span>
+                                </button>
+                                <button class="storage-card" data-storage="512GB" data-price="1299">
+                                    <span class="storage-size">512<small>GB</small></span>
+                                    <span class="storage-price">$1,299</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="config-summary-box">
+                            <div class="total-price-display">
+                                <span id="finalPriceText">iPhone 17 Pro 128GB Cosmic Orange</span>
+                                <span class="price-big" id="finalPriceValue">$999.00</span>
+                            </div>
+                            <button class="cta-button primary buy-bag-btn">Add to Bag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="global-footer"><div class="footer-limiter"><p>Copyright © 2026 Apple Inc. All rights reserved.</p></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Навигационная панель -->
+    <header class="global-nav">
+        <nav class="nav-list">
+            <a href="index.html" class="nav-item apple-logo"><i class="fab fa-apple"></i></a>
+            <a href="#" class="nav-item" data-menu="store">Store</a>
+            <a href="mac.html" class="nav-item" data-menu="mac">Mac</a>
+            <a href="iphone.html" class="nav-item" data-menu="iphone">iPhone</a>
+            <a href="#" class="nav-item" data-menu="watch">Watch</a>
+            <a href="#" class="nav-item" data-menu="vision">Vision</a>
+            <a href="#" class="nav-item" data-menu="airpods">AirPods</a>
+            <a href="#" class="nav-item" data-menu="tv">TV & Home</a>
+            <a href="#" class="nav-item" data-menu="entertainment">Entertainment</a>
+            <a href="#" class="nav-item" data-menu="accessories">Accessories</a>
+            <a href="#" class="nav-item" data-menu="support">Support</a>
+            <a href="#" class="nav-item search-btn" id="searchBtn"><i class="fas fa-search"></i></a>
+            <a href="#" class="nav-item bag-btn" id="bagBtn"><i class="fas fa-shopping-bag"></i></a>
+        </nav>
+    </header>
+
+    <!-- Поиск оверлей -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search apple.com or help" autofocus>
+            <i class="fas fa-times" id="closeSearch"></i>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="main-container">
+        <!-- Секция 1: iPhone 17 Pro -->
+        <section class="hero-section iphone-hero">
+            <div class="hero-content animate-fade-in">
+                <h1 class="product-title">iPhone 17 Pro</h1>
+                <p class="product-subtitle">All-out Titanium.</p>
+                <div class="cta-links">
+                    <a href="iphone.html" class="cta-button primary">Learn more</a>
+                    <a href="iphone.html#buy" class="cta-button secondary">Buy</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png" alt="iPhone 17 Pro" class="product-hero-img">
+            </div>
+        </section>
+
+        <!-- Секция 2: MacBook Pro -->
+        <section class="hero-section macbook-hero-section">
+            <div class="hero-content dark-theme animate-fade-in">
+                <h2 class="product-title">MacBook Pro</h2>
+                <p class="product-subtitle">Mind-blowing. Head-turning.</p>
+                <div class="cta-links">
+                    <a href="mac.html" class="cta-button primary">Learn more</a>
+                    <a href="mac.html#buy" class="cta-button secondary">Buy</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop" alt="MacBook Pro" class="product-hero-img">
+            </div>
+        </section>
+
+        <!-- Секция 3: Apple Watch -->
+        <section class="hero-section watch-hero">
+            <div class="hero-content animate-fade-in">
+                <div class="logo-title"><i class="fab fa-apple"></i><span>WATCH</span></div>
+                <p class="product-subtitle">Sleeker. Smarter than ever.</p>
+                <div class="cta-links">
+                    <a href="#" class="cta-button primary">Learn more</a>
+                    <a href="#" class="cta-button secondary">Buy</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop" alt="Apple Watch" class="product-hero-img small-img">
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="global-footer">
+        <div class="footer-limiter">
+            <div class="footer-directory"><p>1. Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device.</p></div>
+            <div class="footer-legal">
+                <p>Copyright © 2026 Apple Inc. All rights reserved.</p>
+                <div class="legal-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sales Policy</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
